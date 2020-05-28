@@ -12,14 +12,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="734.0" style="-fx-background-color: #58AF9C;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="734.0" style="-fx-background-color: #58AF9C;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.TelaCadastroUsuarioController">
    <children>
       <Label layoutX="123.0" layoutY="14.0" text="Formulário de cadastro de usuários" textFill="WHITE">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <Button layoutX="292.0" layoutY="490.0" mnemonicParsing="false" onAction="#salvarUser" prefHeight="20.0" prefWidth="116.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 15;" text="Confirmar">
+      <Button fx:id="btEntrar" layoutX="292.0" layoutY="490.0" mnemonicParsing="false" onAction="#salvarUser" prefHeight="20.0" prefWidth="116.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 15;" text="Confirmar">
          <font>
             <Font size="18.0" />
          </font>
@@ -59,22 +59,22 @@
             <TextField fx:id="txtNome" GridPane.columnIndex="1" />
             <TextField fx:id="txtSobrenome" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="txtCidade" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="txtPaisNasc" prefHeight="25.0" prefWidth="125.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtPais" prefHeight="25.0" prefWidth="125.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <TextField fx:id="txtEmail" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="txtCep" prefHeight="25.0" prefWidth="146.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <ChoiceBox fx:id="bcEsporte" prefHeight="25.0" prefWidth="219.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="txtCpf" prefHeight="25.0" prefWidth="146.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ChoiceBox fx:id="cbEsportePref" prefHeight="25.0" prefWidth="219.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
             <DatePicker fx:id="dpDataNascimento" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <ChoiceBox fx:id="cbUnidade" prefHeight="25.0" prefWidth="172.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <ChoiceBox fx:id="cbUnidadePref" prefHeight="25.0" prefWidth="172.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
             <Label fx:id="LBLCPF2" prefHeight="20.0" prefWidth="94.0" text="Nome*" textFill="#0a0a0a">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Label text="Esporte Fvorito" GridPane.rowIndex="8" />
+            <Label text="Esporte Favorito" GridPane.rowIndex="8" />
             <Label text="CEP" GridPane.rowIndex="10" />
-            <Label text="Páis natal" GridPane.rowIndex="4" />
-            <TextField fx:id="txtMae" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <TextField fx:id="txtCEP" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Label text="País natal" GridPane.rowIndex="4" />
+            <TextField fx:id="txtNomeMae" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="txtCep" GridPane.columnIndex="1" GridPane.rowIndex="10" />
          </children>
       </GridPane>
       <GridPane fx:id="GPInformacoes1" layoutX="368.0" layoutY="46.0" prefHeight="422.0" prefWidth="331.0">
@@ -106,8 +106,8 @@
             <Label fx:id="LBLEndereco1" text="Cidade" GridPane.rowIndex="4" />
             <Label fx:id="LBLTelefone1" GridPane.rowIndex="4" />
             <TextField fx:id="txtComplemento" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="txtNum" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="txtCidade" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtNumero" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtCidadeRes" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <TextField fx:id="txtBairro" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label fx:id="LBLCPF21" prefHeight="20.0" prefWidth="94.0" text="Complemento" textFill="#0a0a0a" GridPane.rowIndex="2">
                <font>
@@ -120,9 +120,9 @@
             <TextField fx:id="txtEndereco" GridPane.columnIndex="1" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Digite sua senha" GridPane.rowIndex="6" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Digite sua senha novamente" GridPane.rowIndex="7" />
-            <TextField fx:id="txtSenha" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <TextField fx:id="txtSenhaConfirma" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <ChoiceBox fx:id="cbUF" prefHeight="25.0" prefWidth="172.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="senha" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="confirmarSenha" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="txtUf" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
    </children>
