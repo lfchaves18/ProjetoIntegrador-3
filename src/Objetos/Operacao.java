@@ -1,22 +1,21 @@
 
 package Objetos;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 public class Operacao {
     
-    public Integer id;
     public Usuario usuario;
-    public Date dataInicial;
+    public LocalDate data;
     public String unidade;
 
     public Operacao() {
     }
 
-    public Operacao(Integer id, Usuario usuario, Date dataInicial, String unidade) {
-        this.id = id;
+    public Operacao(Usuario usuario, LocalDate data, String unidade) {
         this.usuario = usuario;
-        this.dataInicial = dataInicial;
+        this.data = data;
         this.unidade = unidade;
     }
     

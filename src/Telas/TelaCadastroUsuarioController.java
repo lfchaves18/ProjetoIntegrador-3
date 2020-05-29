@@ -5,7 +5,8 @@
  */
 package Telas;
 
-import Telas.util.Alertas;
+import Gerenciamento.GerenciamentoUsuario;
+import Objetos.Usuario;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -13,16 +14,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 /**
@@ -72,13 +70,32 @@ public class TelaCadastroUsuarioController implements Initializable {
     private ComboBox cbUnidadePref;
     @FXML
     private DatePicker dtNascimento;
+    
+    GerenciamentoUsuario gerUsuario = new GerenciamentoUsuario();
 
     public void confirmarCadastro() {
-
+        Usuario usuario = new Usuario();
+        
+        usuario.propNome = txtNome.getText();
+        usuario.propSobrenome = txtSobrenome.getText();
+        usuario.propEmail = txtEmail.getText();
+        usuario.propCidade = txtCidade.getText();
+        usuario.propPais = txtPais.getText();
+        usuario.propCpf = txtCpf.getText();
+        usuario.propNomeMae = txtNomeMae.getText();
+        usuario.propCep = txtCep.getText();
+        usuario.propEndereco = txtEndereco.getText();
+        usuario.propNumero = txtNumero.getText();
+        usuario.propComplemento = txtComplemento.getText();
+        usuario.propBairro = txtBairro.getText();
+        usuario.propCidadeRes = txtCidadeRes.getText();
+        usuario.propUf = txtUf.getText();
+        usuario.propSenha = senha.getText();
+        usuario.propConfirmarSenha = confirmarSenha.getText();
+        usuario.dtNascimento = dtNascimento.getValue();
+        gerUsuario.inserirUsuario(usuario);
     }
 
-    
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

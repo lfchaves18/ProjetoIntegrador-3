@@ -19,7 +19,7 @@
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <Button fx:id="btEntrar" layoutX="292.0" layoutY="490.0" mnemonicParsing="false" onAction="#salvarUser" prefHeight="20.0" prefWidth="116.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 15;" text="Confirmar">
+      <Button fx:id="btEntrar" layoutX="292.0" layoutY="490.0" mnemonicParsing="false" onAction="#confirmarCadastro" prefHeight="20.0" prefWidth="116.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 15;" text="Confirmar">
          <font>
             <Font size="18.0" />
          </font>
