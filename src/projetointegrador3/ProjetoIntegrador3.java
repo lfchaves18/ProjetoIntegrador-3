@@ -20,7 +20,7 @@ public class ProjetoIntegrador3 extends Application {
     public void start(Stage stage) throws IOException {
      Parent telaCadastro = FXMLLoader.load(
                 getClass().getResource(
-                        "/Telas/TelaLogin.fxml"
+                        "/Telas/TelaAluguel.fxml"
                 )
         );
         

@@ -5,6 +5,7 @@
  */
 package Telas;
 
+import Objetos.DetalheObj;
 import Telas.util.Alertas;
 import java.io.IOException;
 import java.net.URL;
@@ -18,8 +19,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -29,11 +35,23 @@ import javafx.stage.Stage;
  */
 public class TelaDetalhesController implements Initializable {
 
-    @FXML
-    private TextArea txtInformacao;
-    @FXML
-    private Button btCancelar;
     
+    
+    private Button btCancelar;
+    @FXML
+    private ImageView imagem;
+    @FXML
+    private Label txtTexto;
+    
+    String caminho;
+    @FXML
+    private Label Unidade1;
+    @FXML
+    private Label Unidade2;
+    @FXML
+    private Label Unidade3;
+    @FXML
+    private Label Unidade4;
     
     
     /**
@@ -41,9 +59,24 @@ public class TelaDetalhesController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+       
+       //txtTexto.setText(caminho);
     }    
-    @FXML
+    
+    
+    public void PopularTela(DetalheObj detalhe){
+        
+    teste();
+       
+        
+       
+    }
+    
+  public void teste(){
+               Unidade1.setText("aaaaaaaaaa");
+
+  }
+    
     private void entrar(ActionEvent event) throws IOException {
         
          Stage stage = new Stage();
@@ -61,5 +94,9 @@ public class TelaDetalhesController implements Initializable {
         
         Stage fecha = (Stage) btCancelar.getScene().getWindow();
         fecha.close();
+    }
+
+    @FXML
+    private void voltar(MouseEvent event) {
     }
 }

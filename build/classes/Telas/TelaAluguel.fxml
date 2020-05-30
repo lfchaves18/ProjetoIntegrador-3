@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="847.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.TelaAluguelController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="847.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Telas.TelaAluguelController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8bdfce" height="60.0" layoutX="-8.0" stroke="BLACK" strokeType="INSIDE" width="855.0" />
       <Text layoutX="29.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Minhas solicitações">
@@ -40,11 +40,6 @@
       <ImageView fitHeight="77.0" fitWidth="86.0" layoutX="38.0" layoutY="144.0">
          <image>
             <Image url="@../Imagens/icons8-futebol-80.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="124.0" layoutY="134.0" onDragDetected="#DetalheCampo">
-         <image>
-            <Image url="@../Imagens/icons8-ajuda-30.png" />
          </image>
       </ImageView>
       <Button fx:id="btEspacoGate" layoutX="177.0" layoutY="123.0" mnemonicParsing="false" prefHeight="139.0" prefWidth="144.0" style="-fx-background-color: #BDEBE2; -fx-background-radius: 20;" />
@@ -158,5 +153,10 @@
             <Font name="Gautami" size="21.0" />
          </font>
       </Text>
+      <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="124.0" layoutY="134.0" onDragDetected="#DetalheCampo" onMouseClicked="#abrirDetalheCampo">
+         <image>
+            <Image url="@../Imagens/icons8-ajuda-30.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
