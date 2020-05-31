@@ -7,6 +7,7 @@ package Telas;
 
 import Gerenciamento.GerenciamentoUsuario;
 import Objetos.Usuario;
+import Telas.util.Validacoes;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -129,6 +130,7 @@ public class TelaCadastroUsuarioController implements Initializable {
         usuario.propCidade = txtCidade.getText();
         usuario.propPais = txtPais.getText();
         usuario.propCpf = txtCpf.getText();
+        Validacoes.validarCPF(usuario.propCpf);
         usuario.propNomeMae = txtNomeMae.getText();
         usuario.propCep = txtCep.getText();
         usuario.propEndereco = txtEndereco.getText();
