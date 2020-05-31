@@ -64,18 +64,18 @@ public class TelaLoginController implements Initializable {
 
         Stage stage = new Stage();
 
-        Parent telaAluguel = FXMLLoader.load(
+        Parent telaCadasto = FXMLLoader.load(
                 getClass().getResource(
-                        "/Telas/TelaCadastroUsuario.fxml"
+                        "/Telas/CadastroUsuario.fxml"
                 )
         );
 
-        Scene scene = new Scene(telaAluguel);
+        Scene scene = new Scene(telaCadasto);
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
 
-        Stage fecha = (Stage) btEntrar.getScene().getWindow();
+        Stage fecha = (Stage) btCadastrar.getScene().getWindow();
         fecha.close();
 
     }

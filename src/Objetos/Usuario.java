@@ -1,6 +1,6 @@
 package Objetos;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Usuario {
 
@@ -22,12 +22,13 @@ public class Usuario {
     public String propConfirmarSenha;
     public String esportePref;
     public String unidadePref;
-    public Date dtNascimento;
+    public LocalDate dtNascimento;
+    public String Sexo;
 
     public Usuario() {
     }
 
-    public Usuario(String propNome, String propSobrenome, String propEmail, String propCidade, String propPais, String propCpf, String propNomeMae, String propCep, String propEndereco, String propNumero, String propComplemento, String propBairro, String propCidadeRes, String propUf, String propSenha, String propConfirmarSenha, String esportePref, String unidadePref, Date dtNascimento) {
+    public Usuario(String propNome, String propSobrenome, String propEmail, String propCidade, String propPais, String propCpf, String propNomeMae, String propCep, String propEndereco, String propNumero, String propComplemento, String propBairro, String propCidadeRes, String propUf, String propSenha, String propConfirmarSenha, String esportePref, String unidadePref, LocalDate dtNascimento) {
         this.propNome = propNome;
         this.propSobrenome = propSobrenome;
         this.propEmail = propEmail;
